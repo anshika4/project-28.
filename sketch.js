@@ -12,7 +12,7 @@ function preload()
 }
 
 function setup() {
-	createCanvas(3000, 3000);
+	createCanvas(1200, 700);
 
 
 	engine = Engine.create();
@@ -40,31 +40,6 @@ function setup() {
 
 
      
-     //mango=new mangoes(-90,-90)
-     //mango.scale=2;
-     //mango1=new mangoes(-5,-90)
-     //mango1.scale=3;
-     //mango2=new mangoes(90,-90)
-     //mango2.scale=1;
-     //mango3=new mangoes(200,-90)
-     //mango3.scale=1;
-     //mango4=new mangoes(-160,-90)
-     //mango4.scale=2;
-     //mango5=new mangoes(-110,-150)
-     //mango5.scale=2;
-     //mango6=new mangoes(-40,-150)
-    // mango6.scale=2;
-    // mango7=new mangoes(50,-150)
-    // mango7.scale=2;
-    // mango8=new mangoes(150,-150)
-    // mango8.scale=2;
-    // mango9=new mangoes(100,-210)
-    // mango9.scale=2;
-     //mango10=new mangoes(10,-210)
-    // mango10.scale=2;
-    // mango11=new mangoes(-70,-210)
-    // mango11.scale=2;
-
      
      ground=new Ground(600,height,1200,20);
      
@@ -150,14 +125,15 @@ function keyPressed(){
 
 
 function detectCollision(lstone,lmango){
-  mangoPosi=lmango.body.position
-  stonePosi=lstone.body.position
+  mangoBodyPosition=lmango.body.position
+  stoneBodyPosition=lstone.body.position
  
-  var distance=dist(stonePosi.x,stonePosi.y,mangoPosi.x,mangoPosi.y)
-    if(distance<=lmango.radius+lstone.radius){
+  var distance=dist(stoneBodyPosition.x,stoneBodyPosition.y,mangoBodyPosition.x,mangoBodyPosition.y)
+    if(distance<=lmango.radius+lstone.r){
       Matter.Body.setStatic(lmango.body,false);
     }
  }
+ 
 
 
 
