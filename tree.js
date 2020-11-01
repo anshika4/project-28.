@@ -3,7 +3,7 @@ class Tree {
       var options = {
           isStatic: true
       }
-      this.body = Bodies.rectangle(x,y,450,600,options);
+      this.body = Bodies.rectangle(x,y,50,60,options);
       this.width = 450;
       this.height = 600;
       World.add(world, this.body);
@@ -11,9 +11,9 @@ class Tree {
     }
     display(){
       var pos =this.body.position;
-      translate(pos.x,pos.y)
+      
       imageMode(CENTER);
-      image(this.image, 0, 0, this.width, this.height);
+      image(this.image, pos.x,pos.y, this.width, this.height);
       
     }
   }
