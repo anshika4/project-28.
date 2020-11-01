@@ -93,7 +93,7 @@ function draw() {
  
 textSize(15);
 stroke("yellow")
-text("PRESS SPACE TO GET SECOND CHANCE TO PLAY ",-500,-300);
+text("PRESS SPACE TO GET SECOND CHANCE TO PLAY ",50,50);
 
 
 
